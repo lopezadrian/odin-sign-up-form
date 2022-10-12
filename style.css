@@ -1,0 +1,53 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "photo description description"
+        "photo sign-up sign-up"
+        "photo create-account create-account";
+    align-items: center;
+    height: 100vh;
+}
+
+.photo {
+    grid-area: photo;
+    min-width: 30vw;
+    height: 100vh;
+    background-image: url("./images/zeynep-sumer-kpxFYkb3Cfo-unsplash.jpg");
+    background-size: 100%;
+}
+
+.attribution {
+    color: white;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.attribution>a {
+    color: white;
+}
+
+.description,
+.sign-up,
+.create-account {
+    padding-left: 5rem;
+}
+
+.description {
+    grid-area: description;
+}
+
+.sign-up {
+    grid-area: sign-up;
+}
+
+.create-account {
+    grid-area: create-account;
+}
