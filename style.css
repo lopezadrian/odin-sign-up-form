@@ -1,17 +1,22 @@
 body {
     height: 100vh;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    height: 1.5rem;
+    width: 20rem;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
-        "photo description description"
-        "photo sign-up sign-up"
-        "photo create-account create-account";
-    align-items: center;
+        "photo description"
+        "photo sign-up"
+        "photo create-account";
     height: 100vh;
 }
 
@@ -30,7 +35,7 @@ body {
     text-align: center;
 }
 
-.attribution>a {
+.attribution a {
     color: white;
 }
 
@@ -42,12 +47,36 @@ body {
 
 .description {
     grid-area: description;
+    background-color: rgb(251, 251, 251);
 }
 
 .sign-up {
     grid-area: sign-up;
 }
 
+form {
+    height: 20rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+form div {
+    margin: 1rem 0rem 1rem 0rem;
+    width: fit-content;
+    display: inline;
+}
+
 .create-account {
     grid-area: create-account;
+    background-color: rgb(251, 251, 251);
+}
+
+button {
+    border-style: none;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: rgb(39, 125, 39);
+    height: 2.5rem;
+    width: 15rem;
 }
