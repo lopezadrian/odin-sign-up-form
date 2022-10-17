@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./fonts/Norse-Bold.otf);
+}
+
 body {
     height: 100vh;
     margin: 0;
@@ -11,7 +16,7 @@ input {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "photo description"
@@ -22,10 +27,22 @@ input {
 
 .photo {
     grid-area: photo;
-    min-width: 30vw;
-    height: 100vh;
-    background-image: url("./images/zeynep-sumer-kpxFYkb3Cfo-unsplash.jpg");
+    background-image: url("./images/halie-west-25xggax4bSA-unsplash.jpg");
     background-size: 100%;
+}
+
+.banner {
+    font-family: Norse-Bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-top: 10rem;
+    background-color: rgba(53, 53, 53, 0.589);
+}
+
+h1 {
+    margin: 1rem;
 }
 
 .attribution {
@@ -48,10 +65,20 @@ input {
 .description {
     grid-area: description;
     background-color: rgb(251, 251, 251);
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.description .content {
+    font-size: 1.5rem;
+    font-weight: 900;
+    position: absolute;
+    bottom: 0;
 }
 
 .sign-up {
     grid-area: sign-up;
+    box-shadow: 5px 10px 10px #888888;
 }
 
 form {
@@ -67,14 +94,27 @@ form div {
     display: inline;
 }
 
+input {
+    border: 1px solid black;
+    border-radius: 0.3rem;
+}
+
+input:focus {
+    border: 1px solid blue;
+    border-radius: 0.3rem;
+    /* box-shadow: 1px 5px 8px #888888; */
+}
+
 .create-account {
     grid-area: create-account;
     background-color: rgb(251, 251, 251);
+    padding-top: 2rem;
 }
 
 button {
     border-style: none;
     border-radius: 0.5rem;
+    font-size: 1rem;
     color: white;
     background-color: rgb(39, 125, 39);
     height: 2.5rem;
